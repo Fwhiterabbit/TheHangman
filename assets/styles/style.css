@@ -1,0 +1,116 @@
+/*  Google Fonts - Libre Franklin  */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Righteous&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #05dcad;
+
+    min-height: 95vh;
+}
+
+.container {
+    width: 850px;
+    background: whitesmoke;
+    display: flex;
+    align-items: flex-end;
+
+    gap: 70px;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.hangman-box img {
+    max-width: 270px;
+}
+
+.hangman-box h1 {
+    font: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.word-display {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.word-display .letter {
+    text-align: center;
+    text-transform: uppercase;
+
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+
+.game-box h4 {
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    margin-bottom: 15px;
+}
+
+.game-box h4 b {
+    font-weight: 600;
+}
+
+.game-box .guess-text b {
+    color: #379e0f;
+}
+
+.game-box .keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 40px;
+    gap: 5px;
+}
+
+.keyboard button {
+    color: white;
+    background: black;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    padding: 7px;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+
+    width: calc(100% / 9 - 5px);
+}
+
+.keybaord button:hover {
+    background: #343221;
+}
