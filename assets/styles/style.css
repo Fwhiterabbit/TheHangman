@@ -115,6 +115,11 @@ body {
     width: calc(100% / 9 - 5px);
 }
 
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 :where(.game-modal, .keybaord) button:hover {
     background: #343221;
 }

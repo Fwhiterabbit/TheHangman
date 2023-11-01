@@ -1,7 +1,10 @@
+const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
+const guessesText = document.querySelector(".guesses-text b");
 const keyboardDiv = document.querySelector(".keyboard");
 
-let currentWord;
+let currentWord, wrongGuessCount = 0;
+const maxGuesses = 6;
 
 
 // Selecting random word with hint from word_list
@@ -15,11 +18,21 @@ const getRandomWord = () => {
 
 // checking if current letter exist in the word
 const initGame = (button, clickedLetter) => {
+    // Shows all correct clicked letter on the board
     if(currentWord.includes(clickedLetter)) {
-        console.log(clickedLetter, "is exist on the word");
+        [...currentWord].forEach((letter, index) => {
+            if(letter === clickedLetter) {
+                wordDisplay.querySelectorAll("li")[index].innerText = letter;
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        })
     } else {
-        console.log(clickedLetter, "is not exist on the word");
+        // wrong answer updates image of a hangman
+        wrongGuessCount++;
+        hangmanImage.src = `assets/hangman_${wrongGuessCount}.svg`;
     }
+    button.disabled = true;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 }
 
 // keyboard buttons
