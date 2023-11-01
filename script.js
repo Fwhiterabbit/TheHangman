@@ -29,13 +29,13 @@ const initGame = (button, clickedLetter) => {
     } else {
         // wrong answer updates image of a hangman
         wrongGuessCount++;
-        hangmanImage.src = `assets/hangman_${wrongGuessCount}.svg`;
+        hangmanImage.src = `assets/images/hangman_${wrongGuessCount}.svg`;
     }
     button.disabled = true;
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 }
 
-// keyboard buttons
+// keyboard buttons and event listener
 for (let i = 97; i <= 122; i++) {
     const button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
