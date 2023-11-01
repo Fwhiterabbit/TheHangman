@@ -1,6 +1,6 @@
 const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
-const guessesText = document.querySelector(".guesses-text b");
+const guessesText = document.querySelector(".guess-text b");
 const keyboardDiv = document.querySelector(".keyboard");
 
 let currentWord, wrongGuessCount = 0;
