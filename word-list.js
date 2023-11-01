@@ -1,82 +1,66 @@
 const wordList = [
     {
-        word: "CONTROLLER",
+        word: "controller",
         hint: "A device used to interact with games or systems."
     },
     {
-        word: "HEADSHOT",
+        word: "headshot",
         hint: "A shot to the head, usually resulting in an instant kill in many games."
     },
     { 
-        word: "QUEST",
+        word: "quest",
         hint: "A journey or mission in a game, often involving challenges or tasks to complete."
     },
     {
-        word: "LEVEL",
+        word: "level",
         hint: "A distinct section of a game, often with increasing difficulty."
     },
     {
-        word: "MULTIPLAYER",
+        word: "multiplayer",
         hint: "A mode allowing multiple players to participate in a game simultaneously."
     },
     { 
-        word: "RESPAWN",
+        word: "respawn",
         hint: "The reappearance of a player or character in a game after being defeated."
     },
     { 
-        word: "BOSS",
+        word: "boss",
         hint: "A powerful enemy, typically at the end of a level or stage." 
     },
     {
-        word: "PLATFORMER",
+        word: "platformer",
         hint: "A genre of game where the player jumps between suspended platforms." 
     },
     { 
-        word: "RPG",
+        word: "rpg",
         hint: "Role-Playing Game, where players assume the roles of characters in a fictional setting."
     },
     {
-        word: "MMORPG",
+        word: "mmorpg",
         hint: "Massively Multiplayer Online Role-Playing Game, allowing many players to participate together." 
     },
     { 
-        word: "FRIENDS",
+        word: "friends",
         hint: "A popular sitcom about a group of friends living in New York City." 
     },
-    {
-        word: "STRANGERTHINGS",
-        hint: "A science fiction-horror series set in the 1980s." 
-    },
     { 
-        word: "GAMEOFTHRONES",
-        hint: "A fantasy drama series based on the 'A Song of Ice and Fire' novels by George R.R. Martin." 
-    },
-    { 
-        word: "BREAKINGBAD", 
+        word: "breakingbad", 
         hint: "A crime drama series about a high school chemistry teacher turned methamphetamine manufacturer." 
     },
     {
-        word: "SHERLOCK", 
+        word: "sherlock", 
         hint: "A modern adaptation of the Sherlock Holmes detective stories."
     },
     {
-        word: "WESTWORLD",
+        word: "westworld",
         hint: "A science fiction series set in a futuristic Wild-West-themed amusement park." 
     },
     {
-        word: "THECROWN",
+        word: "thecrown",
         hint: "A historical drama series about the reign of Queen Elizabeth II." 
     },
-    { 
-        word: "STRANGERTHINGS",
-        hint: "A science fiction-horror series set in the 1980s."
-    },
     {
-        word: "BLACKMIRROR",
+        word: "blackmirror",
         hint: "An anthology series exploring the dark side of technological advancement." 
     },
-    {
-        word: "THEMANDALORIAN",
-        hint: "A space Western series set in the Star Wars universe." 
-    }
 ];
