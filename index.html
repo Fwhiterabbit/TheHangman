@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hangman Game</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Import a pixelated font */
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    background: #000; /* Black background */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  #button {
+    border: 3px solid #00ff00; /* Bright green border */
+    padding: 1rem;
+    background: #111; /* Dark background for the button area */
+    box-shadow: 0 0 20px #00ff00; /* Green glow */
+  }
+
+  .gaming-button {
+    font-family: 'Press Start 2P', cursive; /* Retro, pixelated font */
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+    background: #ff00ff; /* Bright magenta background */
+    background: linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%); /* Gradient from magenta to cyan */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 0 10px #00ff00; /* Green glow */
+    text-shadow: 0 0 5px #00ff00; /* Green text glow */
+  }
+
+  .gaming-button:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+  }
+
+  .gaming-button:active {
+    transform: scale(0.9); /* Slightly smaller when clicked */
+  }
+
+  .game-rules {
+    color: #00ff00; /* Bright green color for the text */
+    font-family: 'Press Start 2P', cursive;
+    max-width: 600px; /* Ensures the text block isn't too wide */
+    font-size: 0.75rem; /* Smaller font size for the rules */
+  }
+
+  .rules {
+    margin: 10px;
+  }
+
+</style>
 </head>
 <body>
-    <h1>Hello</h1>
-    <div class="container">
-        <div id="button">
-            <form action="main.html">
-                <button class="gaming-button">PLAY NOW</button>
-            </form>
-        </div>
+<div class="container">
+    <div id="button">
+        <form action="main.html">
+            <button class="gaming-button">PLAY NOW</button>
+        </form>
     </div>
+    <div class="game-rules">
+        <p class="rules">Welcome to Hangman! Guess the word by choosing letters. You can make only a limited number of incorrect guesses before the man is 'hung' and the game is over. Each correct guess will reveal the letter in the word. Can you save the hangman by solving the word?</p>
+    </div>
+</div>
 </body>
 </html>

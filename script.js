@@ -28,7 +28,7 @@ const getRandomWord = () => {
     resetGame();
 }
 
-// 3 seconds after game is completed it shoes modal with relevant details
+// ~3 seconds after game is completed it shoes modal with relevant details
 const gameOver = (isVictory) => {
     setTimeout(() => {
         const modalText = isVictory ? `You guessed the word:` : `The correct word was:`;
