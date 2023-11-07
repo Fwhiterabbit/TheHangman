@@ -188,6 +188,40 @@ body {
     padding: 12px 23px;
 }
 
+/* CSS to style the social media links */
+
+.social-links {
+    display: flex; /* Align icons horizontally */
+    gap: 20px; /* Spacing between icons */
+  }
+
+a {
+    text-decoration: none;  /* Optional: removes the underline from links */
+  }
+  
+  /* Increase the size of the icons */
+  i.fab {
+    font-size: 24px; 
+    vertical-align: middle; /* Aligns the icon vertically with adjacent text, if any */
+    padding: 5px;
+
+    padding-left: 70px;
+    margin-top: 50px;
+
+    color: #000;
+  }
+  
+  a:last-child {
+    margin-right: 0;
+  }
+  
+  a:hover {
+    color: #555; /* Change the color on hover */
+  }
+  
+
+
+
 @media (max-width: 782px) {
     .container {
         flex-direction: column;
@@ -201,4 +235,10 @@ body {
     .hangman-box h1 {
         display: none;
     }
+    .social-links {
+        gap: 10px;
+    }
+    .social-links i {
+        font-size: 20px; 
+      }
 }
