@@ -96,7 +96,7 @@ body {
     gap: 5px;
 }
 
-:where(.game-modal, .keybaord) button {
+:where(.modal, .keybaord) button {
     color: white;
     background: black;
 
@@ -122,11 +122,11 @@ body {
     pointer-events: none;
 }
 
-:where(.game-modal, .keybaord) button:hover {
+:where(.modal, .keybaord) button:hover {
     background: #343221;
 }
 
-.game-modal {
+.modal {
     position: fixed;
     display: flex;
     align-items: center;
@@ -146,13 +146,13 @@ body {
     transition: opacity 0.4s ease;
 }
 
-.game-modal.show {
+.modal.show {
     opacity: 1;
     pointer-events: auto;
 }
 
-.game-modal .content {
-    background: #ecaeae;
+.modal .content {
+    background-color: whitesmoke;
 
     max-width: 420px;
     width: 100%;
@@ -163,28 +163,33 @@ body {
     padding: 30px;
 }
 
-.game-modal img {
+.modal img {
     max-width: 150px;
     margin-bottom: 20px;
 }
 
-.game-modal h4 {
-    font-size: 1.53rem;
+.modal h4 {
+    font-size: 2.50rem;
+    font-weight: 600;
+
+    color: gold;
 }
 
-.game-modal p {
-    font-size: 1.15rem;
-    font-weight: 500;
+.modal p {
+    color: gold;
+
+    font-size: 2rem;
+    font-weight: 700;
 
     margin: 15px 0 30px;
 }
 
-.game-modal p b {
+.modal p b {
     color: #379e0f;
     font-weight: 600;
 }
 
-.game-modal button {
+.modal button {
     padding: 12px 23px;
 }
 
@@ -211,17 +216,6 @@ a {
     color: #000;
   }
   
-  a:last-child {
-    margin-right: 0;
-  }
-  
-  a:hover {
-    color: #555; /* Change the color on hover */
-  }
-  
-
-
-
 @media (max-width: 782px) {
     .container {
         flex-direction: column;

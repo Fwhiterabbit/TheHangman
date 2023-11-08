@@ -2,7 +2,7 @@ const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const guessesText = document.querySelector(".guess-text b");
 const keyboardDiv = document.querySelector(".keyboard");
-const gameModal = document.querySelector(".game-modal");
+const gameModal = document.querySelector(".modal");
 const playAgainBtn = document.querySelector(".play-again");
 
 let currentWord, correctLetters, wrongGuessCount;
@@ -33,7 +33,7 @@ const gameOver = (isVictory) => {
     setTimeout(() => {
         const modalText = isVictory ? `You guessed the word:` : `The correct word was:`;
         gameModal.querySelector("img").src = `assets/images/${isVictory ? 'W' : 'L'}.gif`;
-        gameModal.querySelector("h4").innerText = `${isVictory ? 'Gratulations!' : 'Game Over!'}`;
+        gameModal.querySelector("h4").innerText = `${isVictory ? 'Well Done !' : 'Game Over!'}`;
         gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
         gameModal.classList.add("show");
     }, 280);
