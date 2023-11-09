@@ -20,7 +20,7 @@ const resetGame = () => {
 }
 
 
-// Selecting random word with hint from word_list
+// Selecting random word with hint from word-list.js
 const getRandomWord = () => {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     currentWord = word;
@@ -28,7 +28,7 @@ const getRandomWord = () => {
     resetGame();
 }
 
-// ~3 seconds after game is completed it shoes modal with relevant details
+// 2 seconds after game is completed it shoes modal with relevant details
 const gameOver = (isVictory) => {
     setTimeout(() => {
         const modalText = isVictory ? `You guessed the word:` : `The correct word was:`;
@@ -36,12 +36,12 @@ const gameOver = (isVictory) => {
         gameModal.querySelector("h4").innerText = `${isVictory ? 'Well Done !' : 'Game Over!'}`;
         gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
         gameModal.classList.add("show");
-    }, 280);
+    }, 200);
 }
 
-// checking if current letter exist in the word
+// checking if current letter exist in the word, also 
+// shows all correct clicked letter on the board
 const initGame = (button, clickedLetter) => {
-    // Shows all correct clicked letter on the board
     if(currentWord.includes(clickedLetter)) {
         [...currentWord].forEach((letter, index) => {
             if(letter === clickedLetter) {
@@ -71,5 +71,6 @@ for (let i = 97; i <= 122; i++) {
     button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)));
 }
 
+// selecting random word with hint and display play again btn
 getRandomWord();
 playAgainBtn.addEventListener("click", getRandomWord);
